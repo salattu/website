@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Rent Anything Algarve</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        
+        <div class="page">
+            <div id="header">
+                <div id="logo">Rent <span class="highlight">Anything</span> Algarve
+                </div>
+                <nav>
+                  <a href="#request"></a>
+                  <a href="#how"></a>
+                </nav>
+            </div>
+            <div id="hook">
+                <h1 class="headline">
+                    We rent<br/>
+                    <em>
+                        <span>
+                          <span class="highlight">anything</span><br>
+                        </span>
+                    </em>
+                    for your<br/>holiday.
+                </h1>
+                <div class="logline" id="pitch">
+                    <p>Own it only while you need it.</p><p>Time at the beach calls for a cooler and regulations for car seats, but bulky items are expensive to take with. Tell us what you need and we'll have it ready.</p><p>If you can name it, we can find it.</p>
+                </div>
+                <div id="email-container">
+                    <div class="email">email@rent<span>anything</span>algarve.<span>coolsauce.</span>com</div>
+                    <span id="copy-status-left"></span>
+                    <button id="copy-button">Copy</button>
+                    <span id="copy-status-right"></span>
+                    
+                    <script>
+                      const btn = document.getElementById("copy-button");
+                      const statusL = document.getElementById("copy-status-left");
+                      const statusR = document.getElementById("copy-status-right");
+
+                      btn.addEventListener("click", async () => {
+                        try {
+						  const part1 = "email@";
+						  const part2 = "rentanythingalgarve.com";
+						  const textToCopy = part1 + part2;
+                          await navigator.clipboard.writeText(textToCopy);
+                          statusL.textContent = "(: Copied!";
+                          statusR.textContent = "Copied! :)";
+                          statusL.classList.add("visible");
+                          statusR.classList.add("visible");
+                          setTimeout(() => {
+								statusL.textContent = "";
+								statusR.textContent = "";
+								statusL.classList.remove("visible");
+								statusR.classList.remove("visible");
+						}, 1500);
+                          setTimeout(() => statusR.textContent = "", 1500);
+                        } catch (err) {
+                          statusL.textContent = "No worky! Copy it manually.";
+                          statusL.classList.remove("visible");
+                          setTimeout(() => {
+							statusL.textContent = "";
+							statusL.classList.remove("visible");
+						  }, 1500);
+                        }
+                      });
+                    </script>
+                </div>
+                <p class="promise">
+                    We reply within <strong>&nbsp;12 hours</strong>.
+                </p>
+                <div id="postcard">
+                    <div id="stamp">
+                        <div id="stamp-inner">
+                            <div id="stamp-inner-inner">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="postcard-text">Hey Mom! How about that view! Wish you were here. We're having a great time – and found the best deal on car seats! Rest easy and rent, just as you always say.<br><br>&nbsp;&nbsp; Love you xx</p>
+                    <div id="scribble">
+                        ~~-&nbsp;-~-&nbsp;-~~&nbsp;&nbsp;&nbsp;--~~&nbsp;~--&nbsp;~~--&nbsp;~~&nbsp;&nbsp;&nbsp;--~~-- 
+                    </div>
+                </div>
+            </div>
+            <div id="item-strip">
+                <div class="item-container" id="item-a"><img src="images/item-canopy_resized.webp"></div>
+                <div class="item-container" id="item-b"><img src="images/item-carseat_resized.webp"></div>
+                <div class="item-container" id="item-c"><img src="images/item-beach-chair_resized.webp"></div>
+                <div class="item-container" id="item-d"><img src="images/item-table-and-chairs_resized.webp"></div>
+                <div class="item-container" id="item-e"><img src="images/item-table-and-chairs-camping_resized.webp"></div>
+                <div class="item-container" id="item-f"><img src="images/item-parasol_resized.webp"></div>
+                <div class="item-container" id="item-g"><img src="images/item-cooler_resized.webp"></div>
+                <div class="item-container" id="item-h"><img src="images/item-cot-camping_resized.webp"></div>
+            </div>
+            <div id="line">
+            </div>
+            <div id="sinker">
+                <h1 class="headline">
+                    Seldom asked questions
+                </h1>
+                <details class="accordion" open>
+                    <summary class="question">Who is Rent Anything Algarve?</summary>
+                    <div class="answer">We are a family-owned and -operated small business in the south of Portugal, supporting other families and travelers with whatever they need for a most perfect time at a reasonable price.</div>
+                </details>
+                <details class="accordion">
+                    <summary class="question">What payment methods do you accept?</summary>
+                    <div class="answer">Payment is made on delivery. We accept cash and Revolut.</div>
+                </details>
+                <details class="accordion">
+                    <summary class="question">Do you deliver to where I am?</summary>
+                    <div class="answer">We deliver to Faro airport and any villa, apartment, hotel, or campground in the Algarve.</div>
+                </details>
+                <details class="accordion">
+                    <summary class="question">What if I break or lose something?</summary>
+                    <div class="answer">Accidents happen! We fully clean and mend everything to keep our rentables in the best condition. The risk of loss is priced into the cost of rentals. When you return an item, a deposit is returned to you.</div>
+                </details>
+				<div><a href="#pitch"><button id="up-button">Email us now!</button></a></div>
+            </div>
+            <div id="item-strip">
+                <div class="item-container" id="item-a"><img src="images/item-canopy_resized.webp"></div>
+                <div class="item-container" id="item-b"><img src="images/item-carseat_resized.webp"></div>
+                <div class="item-container" id="item-c"><img src="images/item-beach-chair_resized.webp"></div>
+                <div class="item-container" id="item-d"><img src="images/item-table-and-chairs_resized.webp"></div>
+                <div class="item-container" id="item-e"><img src="images/item-table-and-chairs-camping_resized.webp"></div>
+                <div class="item-container" id="item-f"><img src="images/item-parasol_resized.webp"></div>
+                <div class="item-container" id="item-g"><img src="images/item-cooler_resized.webp"></div>
+                <div class="item-container" id="item-h"><img src="images/item-cot-camping_resized.webp"></div>
+            </div>
+            <div id="footer">
+                <p>copyright and trademark 2025</p>
+            </div>
+        </div>
+    </body>
+</html>
